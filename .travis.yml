@@ -10,10 +10,10 @@ script:
   - docker run -e CI=true nekosakanakaeru/complex npm test
 
 after_success:
-  - docker build nekosakanakaeru/complex-client ./client
-  - docker build nekosakanakaeru/complex-nginx ./nginx
-  - docker build nekosakanakaeru/complex-server ./server
-  - docker build nekosakanakaeru/complex-worker ./worker
+  - docker build -t nekosakanakaeru/complex-client ./client
+  - docker build -t nekosakanakaeru/complex-nginx ./nginx
+  - docker build -t nekosakanakaeru/complex-server ./server
+  - docker build -t nekosakanakaeru/complex-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # push to docker hub
