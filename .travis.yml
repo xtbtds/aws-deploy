@@ -13,3 +13,10 @@ after_success:
   - docker build nekosakanakaeru/complex-nginx ./nginx
   - docker build nekosakanakaeru/complex-server ./server
   - docker build nekosakanakaeru/complex-worker ./worker
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # push to docker hub
+  - docker push nekosakanakaeru/complex-client
+  - docker push nekosakanakaeru/complex-nginx
+  - docker push nekosakanakaeru/complex-server
+  - docker push nekosakanakaeru/complex-worker
