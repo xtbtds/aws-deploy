@@ -1,3 +1,5 @@
+![](fib.gif)
+
 # Deploy to AWS
 **1. EBS application**
 
@@ -46,3 +48,6 @@
 
 
 **10. Desploy on pushing to master branch**
+
+# Cleaning up resources
+1. 
