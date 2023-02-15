@@ -1,4 +1,4 @@
-![](fib.gif)
+
 
 # Deploy to AWS
 **1. EBS application**
@@ -55,3 +55,5 @@
 3. Delete postgres db
 4. Delete security groups (from VPC)
 5. Delete IAM user
+
+![](fib.gif)
