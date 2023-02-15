@@ -21,3 +21,15 @@ after_success:
   - docker push nekosakanakaeru/complex-nginx
   - docker push nekosakanakaeru/complex-server
   - docker push nekosakanakaeru/complex-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: complex
+  env: "Complex-env"
+  bucket_name: "elasticbeanstalk-us-east-1-999516119762"
+  bucket_path: "complex"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
