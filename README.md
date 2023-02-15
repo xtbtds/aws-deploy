@@ -50,4 +50,8 @@
 **10. Desploy on pushing to master branch**
 
 # Cleaning up resources
-1. 
+1. Delete EBS app
+2. Delete redis cluster
+3. Delete postgres db
+4. Delete security groups (from VPC)
+5. Delete IAM user
